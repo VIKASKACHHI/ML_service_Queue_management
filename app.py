@@ -19,3 +19,7 @@ def predict(data: dict):
     return {
         "predicted_wait_time_minutes": round(float(prediction), 2)
     }
+
+@app.get("/")
+def health_check():
+    return {"status": "ML service running"}
